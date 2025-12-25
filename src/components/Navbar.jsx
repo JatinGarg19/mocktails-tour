@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Navbar = () => {
+    // This will make the navbar fixed and a bit blurry so that we can still access the elements.
     useGSAP(() => {
         const navTween = gsap.timeline({
             scrollTrigger: {
@@ -27,11 +28,13 @@ const Navbar = () => {
     return (
         <nav>
             <div>
+                {/* Logo */}
                 <a href="#home" className="flex items-center gap-2">
                     <img src="/images/logo.png" alt="logo" />
                     <p>Velvet Pour</p>
                 </a>
 
+                {/* Nav Links */}
                 <ul>
                     {navLinks.map((link) => (
                         <li key={link.id}>
